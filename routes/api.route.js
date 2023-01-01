@@ -19,9 +19,9 @@ router.get('/trends', async (req, res, next) => {
     next(error)
   }
 })
-/*router.get('/near-me', async (req, res, next) => {
+router.get('/near-me', async (req, res, next) => {
   try {
-    const { lat, long } = req.query
+    const {lat,long} = req.query
     const response = await client.get('/trends/closest.json', {
       lat,
       long,
@@ -31,6 +31,6 @@ router.get('/trends', async (req, res, next) => {
     console.log(error.message)
     next(error)
   }
-})*/
+})
 
 module.exports = router
